@@ -13,9 +13,9 @@ Skrevet i TypeScript med Claude API. Prosjektet har 42 tester, og CI kjører typ
 
 Siste kjøring av kvalitetsvakten: 24 av 24 testsamtaler bestått (8 scenarier, 3 forsøk hver). Alle kjøringer, hva som ble rettet underveis og forbehold står i [docs/eval](docs/eval/README.md).
 
-![Live overvåking med risikoflagg](docs/skjermbilder/live-overvaking.png)
+![Kvalitetsvakten tester en samtale](docs/skjermbilder/kvalitetsvakt.png)
 
-Video, to minutter: [docs/demo.mp4](docs/demo.mp4)
+Video, halvannet minutt: [docs/demo.mp4](docs/demo.mp4)
 
 ## Kom i gang
 
