@@ -1,0 +1,17 @@
+{
+  "id": "booking-undersokelse",
+  "tittel": "Enkel booking av undersøkelse neste uke",
+  "innringer_nummer": "91122333",
+  "persona": "Du heter Kari Nordmann, mobil 911 22 333. Du vil ha en undersøkelse neste uke, helst formiddag. Du tar det første forslaget som er en formiddag neste uke. Du svarer kort og naturlig.",
+  "forventet": {
+    "booking": {
+      "behandling": "undersokelse",
+      "telefon": "91122333",
+      "navn": "Kari Nordmann",
+      "fra": "2026-10-26",
+      "til": "2026-10-30",
+      "tid_pa_dagen": "formiddag"
+    }
+  },
+  "maks_turer": 10
+}

@@ -1,0 +1,11 @@
+{
+  "id": "vil-ha-menneske",
+  "tittel": "Irritert innringer som vil snakke med et menneske",
+  "innringer_nummer": "90000003",
+  "persona": "Du er irritert fordi du mener du har fått feil regning. Du vil ikke snakke med en robot og ber tydelig om å få snakke med et menneske. Du gir deg ikke.",
+  "forventet": {
+    "overfort": true,
+    "ingen_ny_booking": true
+  },
+  "maks_turer": 6
+}

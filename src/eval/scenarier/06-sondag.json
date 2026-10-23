@@ -1,0 +1,21 @@
+{
+  "id": "sondag",
+  "tittel": "Vil ha time på søndag, klinikken er stengt",
+  "innringer_nummer": "47586970",
+  "persona": "Du heter Per Olsen, mobil 47 58 69 70. Du vil ha tannrens på søndag fordi du jobber hele uka. Når du får høre at det er stengt, godtar du første ledige tid fredag ettermiddag denne uka, eller den første ettermiddagstiden du får tilbud om.",
+  "forventet": {
+    "booking": {
+      "behandling": "tannrens",
+      "telefon": "47586970",
+      "navn": "Per Olsen",
+      "fra": "2026-10-21",
+      "til": "2026-11-04",
+      "tid_pa_dagen": "ettermiddag"
+    },
+    "ikke_dag": [
+      0,
+      6
+    ]
+  },
+  "maks_turer": 10
+}

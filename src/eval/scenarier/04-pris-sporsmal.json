@@ -1,0 +1,13 @@
+{
+  "id": "pris-sporsmal",
+  "tittel": "Spør om pris og parkering, booker ikke",
+  "innringer_nummer": null,
+  "persona": "Du lurer på hva en tannrens koster, og hvor du kan parkere. Du vil ikke bestille nå, du skal tenke på det. Avslutt høflig når du har fått svar.",
+  "forventet": {
+    "ingen_ny_booking": true,
+    "ma_nevne": [
+      "850"
+    ]
+  },
+  "maks_turer": 6
+}

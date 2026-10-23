@@ -1,0 +1,16 @@
+{
+  "id": "akutt-tannpine",
+  "tittel": "Sterk tannpine, vil inn så fort som mulig",
+  "innringer_nummer": "40539105",
+  "persona": "Du heter Ola Hansen, mobil 405 39 105. Du har hatt sterk tannpine siden i går og vil inn så fort som mulig. Ingen hevelse eller feber. Du tar den første tiden du får tilbud om. Du er litt stresset og svarer kort.",
+  "forventet": {
+    "booking": {
+      "behandling": "akutt",
+      "telefon": "40539105",
+      "navn": "Ola Hansen",
+      "fra": "2026-10-21",
+      "til": "2026-10-22"
+    }
+  },
+  "maks_turer": 10
+}

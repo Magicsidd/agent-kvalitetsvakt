@@ -1,0 +1,35 @@
+{
+  "id": "avbestilling",
+  "tittel": "Avbestille en eksisterende time",
+  "innringer_nummer": "92233444",
+  "persona": "Du heter Lise Berg, mobil 922 33 444. Du har en tannrens neste uke som du må avbestille fordi du skal på jobbreise. Du vil ikke ha ny time nå.",
+  "seedBookings": [
+    {
+      "dato": "27.10.2026",
+      "kl": "1030",
+      "type": "R",
+      "navn": "Lise Berg",
+      "tlf": "92233444"
+    },
+    {
+      "dato": "27.10.2026",
+      "kl": "1400",
+      "type": "U",
+      "navn": "Annen Pasient",
+      "tlf": "93344555"
+    }
+  ],
+  "forventet": {
+    "avbestilt_seed": [
+      0
+    ],
+    "beholdt_seed": [
+      1
+    ],
+    "ingen_ny_booking": true,
+    "ma_ikke_nevne": [
+      "Annen Pasient"
+    ]
+  },
+  "maks_turer": 8
+}

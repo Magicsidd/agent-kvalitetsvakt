@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashbord · Agent-kvalitetsvakt</title>
+  <link rel="stylesheet" href="/stil.css">
+  <link rel="icon" href="/ikon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topp">
+    <div class="logo"><span class="logo-prikk"></span>Agent-kvalitetsvakt</div>
+    <nav><a href="/">Ring agenten</a><a href="/dashbord" class="aktiv">Dashbord</a></nav>
+  </header>
+
+  <main class="side">
+    <div class="fane-rad" role="tablist">
+      <button class="aktiv" data-fane="live">Live</button>
+      <button data-fane="samtaler">Samtaler</button>
+      <button data-fane="kvalitet">Kvalitetsvakt</button>
+      <button data-fane="compliance">Compliance</button>
+      <button data-fane="leads">Leads</button>
+    </div>
+
+    <section id="fane-live">
+      <p class="dempet liten">Pågående samtaler i sanntid, med risikoflagg. Du kan hviske en instruks til agenten: den går som systemmelding, og innringeren hører den aldri.</p>
+      <div class="live-rutenett" id="live"><div class="kort tom">Ingen aktive samtaler. Åpne «Ring agenten» i en annen fane.</div></div>
+    </section>
+
+    <section id="fane-samtaler" class="skjult">
+      <div class="kort">
+        <h2>Samtaler</h2>
+        <div class="tabell-wrap">
+          <table>
+            <thead><tr><th>Tid</th><th>Agent</th><th>Status</th><th>Utfall</th><th class="tall-kol">Turer</th><th class="tall-kol">Snitt svartid</th><th>Verktøy</th><th>Flagg</th></tr></thead>
+            <tbody id="samtaler"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="kort skjult" id="samtale-detalj"></div>
+    </section>
+
+    <section id="fane-kvalitet" class="skjult">
+      <div class="kort">
+        <div class="flex mellom">
+          <h2>Kvalitetsvakt</h2>
+          <div class="flex liten">
+            <label for="kjoring">Kjøring</label><select id="kjoring"></select>
+            <label for="sammenlign">mot</label><select id="sammenlign"><option value="">(ingen)</option></select>
+          </div>
+        </div>
+        <p class="dempet liten">Simulerte innringere mot agenten: automatiske sjekker (riktig booking, oppdiktede tider, KI-opplysning, bekreftelse før booking, personvern) og en LLM-dommer. Kjør <code>npm run eval</code> for en ny kjøring, og sammenlign før og etter en endring i prompt eller modell.</p>
+        <div id="kvalitet-innhold"></div>
+      </div>
+      <div class="kort skjult" id="scenario-detalj"></div>
+    </section>
+
+    <section id="fane-leads" class="skjult">
+      <div class="kort">
+        <h2>Leads fra demoen</h2>
+        <p class="dempet liten">Folk som har testet agenten på sin egen nettside og booket en gjennomgang. Oppsummeringen følger med, så selgeren vet hva de spurte om og hva agenten ikke kunne svare på.</p>
+        <div class="tabell-wrap">
+          <table>
+            <thead><tr><th>Tid</th><th>Virksomhet</th><th>Kontakt</th><th>Hva testen viste</th><th>Ubesvart</th><th class="tall-kol">Hull i kunnskapen</th></tr></thead>
+            <tbody id="leads"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="fane-compliance" class="skjult">
+      <div class="rutenett">
+        <div class="kort">
+          <h2>Ringetider for utgående telefonsalg</h2>
+          <p class="dempet liten">Forbudt på lørdager, søn- og helligdager, og på hverdager før kl. 09 og etter kl. 21. Agenten sjekker dette før en kampanje ringer ut.</p>
+          <form id="ringetid-skjema" class="felt">
+            <label for="ringetid">Tidspunkt</label>
+            <div class="flex"><input id="ringetid" type="datetime-local" required><button class="knapp primar">Sjekk</button></div>
+          </form>
+          <div id="ringetid-svar"></div>
+        </div>
+        <div class="kort">
+          <div class="flex mellom"><h2>Helligdager</h2><input id="aar" type="number" min="2000" max="2100" class="liten"></div>
+          <table><tbody id="helligdager"></tbody></table>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="/dashbord.js" type="module"></script>
+</body>
+</html>

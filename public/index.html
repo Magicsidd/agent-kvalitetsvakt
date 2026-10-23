@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="nb">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ring agenten · Agent-kvalitetsvakt</title>
+  <link rel="stylesheet" href="/stil.css">
+  <link rel="icon" href="/ikon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="topp">
+    <div class="logo"><span class="logo-prikk"></span>Agent-kvalitetsvakt</div>
+    <span class="status-chip" id="modell">…</span>
+    <nav><a href="/" class="aktiv">Ring agenten</a><a href="/dashbord">Dashbord</a></nav>
+  </header>
+
+  <main class="side rutenett">
+    <section>
+      <div class="kort">
+        <div class="fane-rad" role="tablist">
+          <button class="aktiv" data-modus="klinikk">Tannklinikk</button>
+          <button data-modus="nettside">Din nettside</button>
+        </div>
+
+        <div id="modus-klinikk">
+          <p class="liten dempet">En fiktiv tannklinikk med ekte booking mot et gammelt fagsystem. Prøv å bestille, flytte eller avbestille en time, spør om priser, eller prøv å lure den.</p>
+        </div>
+
+        <div id="modus-nettside" class="skjult">
+          <p class="liten dempet">Lim inn en nettadresse. Siden hentes trygt (bare offentlige adresser, ingen omdirigering til interne nett) og blir agentens kunnskap. Ingen e-post kreves.</p>
+          <form id="nettside-skjema" class="felt">
+            <label for="url">Nettadresse</label>
+            <div class="flex"><input id="url" type="url" placeholder="https://din-bedrift.no" required><button class="knapp primar" id="lag-agent">Lag agent</button></div>
+          </form>
+          <div id="nettside-status" class="liten dempet"></div>
+        </div>
+
+        <div class="felt mt">
+          <label for="nummer">Ringer fra (valgfritt, simulerer nummervisning)</label>
+          <input id="nummer" type="tel" placeholder="f.eks. 922 33 444">
+        </div>
+
+        <div class="ring-omraade">
+          <button class="ring-knapp" id="ring">Ring</button>
+          <div class="niva" aria-hidden="true"><div class="niva-fyll" id="niva"></div></div>
+          <div class="tilstand" id="tilstand">Trykk ring og snakk norsk. Eller skriv nederst.</div>
+        </div>
+      </div>
+
+      <div class="kort skjult" id="oppsummering-kort">
+        <div class="flex mellom"><h2>Etter samtalen</h2><span id="utfall"></span></div>
+        <div id="oppsummering"><p class="dempet liten">Lager oppsummering …</p></div>
+      </div>
+    </section>
+
+    <section class="kort">
+      <div class="flex mellom"><h2 id="samtale-tittel">Samtale</h2><span class="liten dempet" id="maling"></span></div>
+      <div class="transkripsjon" id="transkripsjon"><div class="tom">Transkripsjonen vises her mens du snakker.</div></div>
+      <form class="skriv-rad" id="skriv">
+        <input id="skrivefelt" type="text" placeholder="Skriv i stedet for å snakke …" autocomplete="off" disabled>
+        <button class="knapp" id="send" disabled>Send</button>
+      </form>
+    </section>
+  </main>
+  <script src="/ring.js" type="module"></script>
+</body>
+</html>
